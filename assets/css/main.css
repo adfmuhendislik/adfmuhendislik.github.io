@@ -283,7 +283,7 @@ body {
 
 body {
   /* background-color: #0c0c0c; */
-  background-color: #000010;
+  background-color:#032b08 ;
   font-size: 14px;
   line-height: 1.6;
   font-family: "Montserrat", sans-serif;
@@ -316,9 +316,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  FONT-FAMILY: Roboto-Light;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          
 }
 
 .l-side-nav::before {
@@ -494,6 +496,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  margin-left: 10px;
   color: #fff;
 }
 
@@ -1449,7 +1452,7 @@ body {
   -webkit-transform: translateZ(0) translateX(0) rotateY(0deg);
           transform: translateZ(0) translateX(0) rotateY(0deg);
   min-height: 100%;
-  outline: 30px solid #0f33ff;
+  outline: 30px solid #ffffff;
   -webkit-transition: -webkit-transform .4s;
   transition: -webkit-transform .4s;
   transition: transform .4s;
@@ -1477,7 +1480,7 @@ body {
 .effect-rotate-left--animate .container {
   -webkit-transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
           transform: translateZ(-1800px) translateX(-50%) rotateY(45deg);
-  outline: 30px solid #0f33ff;
+  outline: 30px solid #ffffff;
 }
 
 .outer-nav {
@@ -1544,14 +1547,14 @@ body {
 .outer-nav > li::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 31%;
   left: 50%;
   -webkit-transform: translate(-50%, -25%);
-          transform: translate(-50%, -25%);
+  transform: translate(-50%, -25%);
   width: 110%;
-  height: 15px;
+  height: 79px;
   opacity: 0;
-  background-color: #0f33ff;
+  background-color: rgba(255 , 255 , 255 , 0.2);
 }
 
 .outer-nav > li.is-active::before {

@@ -25,25 +25,32 @@ html {
 }
 
 .intro--title {
-    font-weight: 800;
+    font-weight: 700;
     color: transparent;
-    font-size: 120px;
+    font-size: 174px;
     /* background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat; */
     background: url("https://img.freepik.com/foto-gratis/plantaciones-papa-crecen-campo-hileras-hortalizas-agricultura-agricultura-paisaje_72572-50.jpg?size=626&ext=jpg") repeat;
     background-position: 40% 50%;
     -webkit-background-clip: text;
     position: relative;
     text-align: center;
-    line-height: 100px;
+    line-height: 145px;
     letter-spacing: -8px;
-    max-width: 700px;
+    max-width: 900px;
     margin: auto;
 }
 
 .intro--subtitle {
-    display: block;
+    /*display: block; */
+    width: 100%;
     text-align: center;
+    position: absolute;
     text-transform: uppercase;
-    padding-top: 20px;
-    FONT-FAMILY: Rubik-Regular;
+    bottom: 50px;
+    FONT-FAMILY: Roboto-Light;
+}
+.intro--subtitle--logo
+{
+    font-size: 30px;
+    FONT-FAMILY: Digitall !important;
 }
