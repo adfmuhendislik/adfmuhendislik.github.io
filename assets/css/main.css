@@ -1128,16 +1128,13 @@ body {
 .contact--lockup {
   position: absolute;
   display: flex;
-  top: 0;
-  left: 0;
-  width: 100%;
+  transform-origin: center;
+  top: 25%;
+  left: 75%;
   z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* width: 900px; */
-  max-width: 75%;
-  height: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
