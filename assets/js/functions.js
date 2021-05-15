@@ -1,14 +1,12 @@
 // @codekit-prepend "/vendor/hammer-2.0.8.js";
-
-$( document ).ready(function() {
+$(document).ready(function () {
 
   // DOMMouseScroll included for firefox support
   var canScroll = true,
-      scrollController = null;
-  $(this).on('mousewheel DOMMouseScroll', function(e){
+    scrollController = null;
+  $(this).on('mousewheel DOMMouseScroll', function (e) {
 
     if (!($('.outer-nav').hasClass('is-vis'))) {
-
       e.preventDefault();
 
       var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 20;
@@ -16,7 +14,7 @@ $( document ).ready(function() {
       if (delta > 50 && canScroll) {
         canScroll = false;
         clearTimeout(scrollController);
-        scrollController = setTimeout(function(){
+        scrollController = setTimeout(function () {
           canScroll = true;
         }, 800);
         updateHelper(1);
@@ -24,7 +22,7 @@ $( document ).ready(function() {
       else if (delta < -50 && canScroll) {
         canScroll = false;
         clearTimeout(scrollController);
-        scrollController = setTimeout(function(){
+        scrollController = setTimeout(function () {
           canScroll = true;
         }, 800);
         updateHelper(-1);
@@ -35,15 +33,15 @@ $( document ).ready(function() {
   });
 
   // On click left nav
-  $('.side-nav li, .outer-nav li').click(function(){
+  $('.side-nav li, .outer-nav li').click(function () {
 
     if (!($(this).hasClass('is-active'))) {
 
       var $this = $(this),
-          curActive = $this.parent().find('.is-active'),
-          curPos = $this.parent().children().index(curActive),
-          nextPos = $this.parent().children().index($this),
-          lastItem = $(this).parent().children().length - 1;
+        curActive = $this.parent().find('.is-active'),
+        curPos = $this.parent().children().index(curActive),
+        nextPos = $this.parent().children().index($this),
+        lastItem = $(this).parent().children().length - 1;
 
       updateNavs(nextPos);
       updateContent(curPos, nextPos, lastItem);
@@ -53,12 +51,12 @@ $( document ).ready(function() {
   });
 
   // Goes last page
-  $('.cta').click(function(){
+  $('.cta').click(function () {
 
     var curActive = $('.side-nav').find('.is-active'),
-        curPos = $('.side-nav').children().index(curActive),
-        lastItem = $('.side-nav').children().length - 1,
-        nextPos = lastItem;
+      curPos = $('.side-nav').children().index(curActive),
+      lastItem = $('.side-nav').children().length - 1,
+      nextPos = lastItem;
 
     updateNavs(lastItem);
     updateContent(curPos, nextPos, lastItem);
@@ -67,16 +65,16 @@ $( document ).ready(function() {
 
   // swipe support for touch devices
   var targetElement = document.getElementById('viewport'),
-      mc = new Hammer(targetElement);
+    mc = new Hammer(targetElement);
   mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  mc.on('swipeup swipedown', function(e) {
+  mc.on('swipeup swipedown', function (e) {
 
     updateHelper(e);
 
   });
 
   // Catch key press for page changing
-  $(document).keyup(function(e){
+  $(document).keyup(function (e) {
 
     if (!($('.outer-nav').hasClass('is-vis'))) {
       e.preventDefault();
@@ -89,9 +87,9 @@ $( document ).ready(function() {
   function updateHelper(param) {
 
     var curActive = $('.side-nav').find('.is-active'),
-        curPos = $('.side-nav').children().index(curActive),
-        lastItem = $('.side-nav').children().length - 1,
-        nextPos = 0;
+      curPos = $('.side-nav').children().index(curActive),
+      lastItem = $('.side-nav').children().length - 1,
+      nextPos = 0;
 
     if (param.type === "swipeup" || param.keyCode === 40 || param > 0) {
       if (curPos !== lastItem) {
@@ -104,8 +102,8 @@ $( document ).ready(function() {
         updateContent(curPos, nextPos, lastItem);
       }
     }
-    else if (param.type === "swipedown" || param.keyCode === 38 || param < 0){
-      if (curPos !== 0){
+    else if (param.type === "swipedown" || param.keyCode === 38 || param < 0) {
+      if (curPos !== 0) {
         nextPos = curPos - 1;
         updateNavs(nextPos);
         updateContent(curPos, nextPos, lastItem);
@@ -125,7 +123,10 @@ $( document ).ready(function() {
     $('.side-nav, .outer-nav').children().removeClass('is-active');
     $('.side-nav').children().eq(nextPos).addClass('is-active');
     $('.outer-nav').children().eq(nextPos).addClass('is-active');
-
+    if (nextPos == 6)
+      document.getElementsByClassName('header')[0].style.backgroundColor = 'rgba(0 , 0 , 0 , 0.5)';
+    else
+      document.getElementsByClassName('header')[0].style.backgroundColor = 'rgba(0 , 0 , 0 , 0.0)';
   }
 
   // update main content area
@@ -156,20 +157,20 @@ $( document ).ready(function() {
 
   function outerNav() {
 
-    $('.header--nav-toggle').click(function(){
+    $('.header--nav-toggle').click(function () {
 
       $('.perspective').addClass('perspective--modalview');
-      setTimeout(function(){
+      setTimeout(function () {
         $('.perspective').addClass('effect-rotate-left--animate');
       }, 25);
       $('.outer-nav, .outer-nav li, .outer-nav--return').addClass('is-vis');
 
     });
 
-    $('.outer-nav--return, .outer-nav li').click(function(){
+    $('.outer-nav--return, .outer-nav li').click(function () {
 
       $('.perspective').removeClass('effect-rotate-left--animate');
-      setTimeout(function(){
+      setTimeout(function () {
         $('.perspective').removeClass('perspective--modalview');
       }, 400);
       $('.outer-nav, .outer-nav li, .outer-nav--return').removeClass('is-vis');
@@ -180,7 +181,7 @@ $( document ).ready(function() {
 
   function transitionLabels() {
 
-    $('.work-request--information input').focusout(function(){
+    $('.work-request--information input').focusout(function () {
 
       var textVal = $(this).val();
 
@@ -198,7 +199,7 @@ $( document ).ready(function() {
 
   }
 
-  
+
 
   outerNav();
   faaliyetlerPage.slider();
