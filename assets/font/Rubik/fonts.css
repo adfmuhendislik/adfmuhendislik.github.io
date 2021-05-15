@@ -1,46 +1,46 @@
 @font-face {
-  font-family: "Rubik-Black";
-  src: url("./Rubik-Black.ttf");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Rubik-Black';
+    src: url('./Rubik-Black.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Rubik-Bold";
-  src: url("./Rubik-Bold.ttf");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Rubik-Bold';
+    src: url('./Rubik-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Rubik-Light";
-  src: url("./Rubik-Light.ttf");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Rubik-Light';
+    src: url('./Rubik-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Rubik-Medium";
-  src: url("./Rubik-Medium.ttf");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Rubik-Medium';
+    src: url('./Rubik-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Rubik-Regular";
-  src: url("./Rubik-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Rubik-Regular';
+    src: url('./Rubik-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: "Digitall";
-  src: url("../01Digital/01Digitall.ttf");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Digitall';
+    src: url('../01Digital/01Digitall.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: "Roboto-Light";
-  src: url("../Roboto/Roboto-Light.ttf");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Roboto-Light';
+    src: url('../Roboto/Roboto-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
